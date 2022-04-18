@@ -47,7 +47,7 @@ describe('/strings', () => {
   });
 
   describe('GET /lower/{string}', () => {
-    xit('returns the lowercased string', done => {
+    it('returns the "hello" when passed "HELLO"', done => {
       request(app)
         .get('/strings/lower/HELLO')
         .then(res => {
@@ -56,10 +56,20 @@ describe('/strings', () => {
           done();
         });
     });
+
+    it('returns the "goodbye" when passed "GOODBYE"', done => {
+      request(app)
+        .get('/strings/lower/goodbye')
+        .then(res => {
+          expect(res.status).toEqual(200);
+          expect(res.body).toEqual({ result: 'goodbye' });
+          done();
+        });
+    });
   });
 
   describe('GET /first-characters/{string}', () => {
-    xit('returns the first character of the string when there is no query string', done => {
+    it('returns the first character of the string when there is no query string', done => {
       request(app)
         .get('/strings/first-characters/hello')
         .then(res => {
