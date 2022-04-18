@@ -1,38 +1,19 @@
-# JavaScript Basics in Express
+# Javascript Basics in Express
 
-## Getting started
+A web API using Express that exposes a selection of JavaScript kata.
 
-Ensure your Visual Studio Code application is up to date, and that you have the [ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) installed and enabled.
+## Concepts covered
 
-Run the commands below inside your `Projects` folder.
+- Web Servers and Web API's
+- HTTP requests and responses
+- Routing
+- Contoller functions
+- Middleware
 
-```bash
-git clone git@github.com:MCRcodes/javascript-basics-express.git
-cd your-project-folder-name
-npm install
-```
+## Acknowledgements
 
-## Copy over your JavaScript Basics code
+Forms part of the <a href="https://www.manchestercodes.com/">Manchester Codes</a> Full Stack Software Engineering Bootcamp curriculem.
 
-:rotating_light: **Important!**
+## Project Status
 
-This exercise makes use of your previous `javascript-basics` code. Copy the files from that project's `src/` folder into a new `lib/` directory in this repository's `src` directory. You should end up with the following file structure in this project:
-
-```
-src
-├── app.js
-└── lib
-    ├── arrays.js
-    ├── booleans.js
-    ├── numbers.js
-    ├── objects.js
-    └── strings.js
-```
-
-## Running tests
-
-You can run tests with the `npm test` command.
-
-## Remember: READMEs are important!
-
-When you're finished, be sure to rewrite this one so it's more specific to your project.
+Active!
