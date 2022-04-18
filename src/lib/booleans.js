@@ -14,27 +14,25 @@ function both(a, b) {
 function either(a, b) {
   if (a === true || b === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function none(a, b) {
   if (a === false && b === false) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function one(a, b) {
   if (a === true && b === false) {
     return true;
-  } else if (a === false && b === true) {
-    return true;
-  } else {
-    return false;
   }
+  if (a === false && b === true) {
+    return true;
+  }
+  return false;
 }
 
 function truthiness(a) {
@@ -44,59 +42,52 @@ function truthiness(a) {
 function isEqual(a, b) {
   if (a === b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function isGreaterThan(a, b) {
   if (a > b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function isLessThanOrEqualTo(a, b) {
   if (a <= b) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function isOdd(a) {
-  let remainder = a % 2;
+  const remainder = a % 2;
   if (remainder === 0) {
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 
 function isEven(a) {
-  let remainder = a % 2;
+  const remainder = a % 2;
   if (remainder === 0) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function isSquare(a) {
   if (a >= 0 && Number.isInteger(Math.sqrt(a))) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function startsWith(char, string) {
   if (string[0] === char) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 function containsVowels(string) {
@@ -133,5 +124,5 @@ module.exports = {
   isSquare,
   startsWith,
   containsVowels,
-  isLowerCase
+  isLowerCase,
 };

@@ -42,11 +42,11 @@ const averageAge = people => {
 
 const createTalkingPerson = (name, age) => {
   const person = {
-    name: name,
-    age: age,
+    name,
+    age,
     introduce(newFriend) {
       return `Hi ${newFriend}, my name is ${person.name} and I am ${person.age}!`;
-    }
+    },
   };
   return person;
 };
@@ -61,5 +61,5 @@ module.exports = {
   findByName,
   findHondas,
   averageAge,
-  createTalkingPerson
+  createTalkingPerson,
 };

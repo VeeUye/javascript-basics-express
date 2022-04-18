@@ -12,15 +12,35 @@ describe('/strings', () => {
           done();
         });
     });
+
+    it('returns "Hello, turtle!" when passed "turtle"', done => {
+      request(app)
+        .get('/strings/hello/turtle')
+        .then(res => {
+          expect(res.status).toEqual(200);
+          expect(res.body).toEqual({ result: 'Hello, turtle!' });
+          done();
+        });
+    });
   });
 
   describe('GET /upper/{string}', () => {
-    xit('returns the uppercased string', done => {
+    it('returns "HELLO" when passed "hello"', done => {
       request(app)
         .get('/strings/upper/hello')
         .then(res => {
           expect(res.status).toEqual(200);
           expect(res.body).toEqual({ result: 'HELLO' });
+          done();
+        });
+    });
+
+    it('returns "GOODBYE" when passed "goodbye"', done => {
+      request(app)
+        .get('/strings/upper/goodbye')
+        .then(res => {
+          expect(res.status).toEqual(200);
+          expect(res.body).toEqual({ result: 'GOODBYE' });
           done();
         });
     });

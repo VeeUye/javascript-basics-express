@@ -1,6 +1,5 @@
 function sayHello(string) {
-  // your code here
-  return 'Hello, ' + string + '!';
+  return `Hello, ${string}!`;
 }
 
 function uppercase(string) {
@@ -32,5 +31,5 @@ module.exports = {
   lowercase,
   countCharacters,
   firstCharacter,
-  firstCharacters
+  firstCharacters,
 };
