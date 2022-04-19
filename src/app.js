@@ -7,6 +7,8 @@ const numbersRoute = require('./routes/numbers-routes');
 
 const app = express();
 
+app.use(express.json());
+
 app.use('/strings', stringsRoute);
 
 app.use('/numbers', numbersRoute);
