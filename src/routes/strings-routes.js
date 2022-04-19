@@ -19,14 +19,11 @@ router.get('/lower/:string', (req, res) => {
 });
 
 router.get('/first-characters/:string', (req, res) => {
-  res.status(200);
-
   const nCharacters = req.query.length;
-  if (nCharacters) {
-    res.json({ result: firstCharacters(req.params.string, nCharacters) });
-  } else {
-    res.json({ result: firstCharacter(req.params.string) });
-  }
+  res.status(200);
+  return nCharacters
+    ? res.json({ result: firstCharacters(req.params.string, nCharacters) })
+    : res.json({ result: firstCharacter(req.params.string) });
 });
 
 module.exports = router;
