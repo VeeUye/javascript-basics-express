@@ -1,10 +1,16 @@
 const router = require('express').Router();
 
-const { sayHello } = require('../lib/strings');
-const { uppercase } = require('../lib/strings');
-const { lowercase } = require('../lib/strings');
-const { firstCharacter } = require('../lib/strings');
-const { firstCharacters } = require('../lib/strings');
+const {
+  sayHello,
+  uppercase,
+  lowercase,
+  firstCharacter,
+  firstCharacters,
+} = require('../lib/strings');
+// const { uppercase } = require('../lib/strings');
+// const { lowercase } = require('../lib/strings');
+// const { firstCharacter } = require('../lib/strings');
+// const { firstCharacters } = require('../lib/strings');
 
 router.get('/hello/:string', (req, res) => {
   res.status(200).json({ result: sayHello(req.params.string) });
