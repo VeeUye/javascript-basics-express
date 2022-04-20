@@ -12,7 +12,7 @@ A web API using Express that exposes a selection of JavaScript kata.
 
 ## Acknowledgements
 
-Forms part of the <a href="https://www.manchestercodes.com/">Manchester Codes</a> Full Stack Software Engineering Bootcamp curriculem.
+Forms part of the <a href="https://www.manchestercodes.com/">Manchester Codes</a> Full Stack Software Engineering Bootcamp curriculum.
 
 ## Project Status
 
