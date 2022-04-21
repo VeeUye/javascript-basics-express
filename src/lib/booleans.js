@@ -3,36 +3,19 @@ function negate(a) {
 }
 
 function both(a, b) {
-  //   if (a === true && b === true) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
-  return a === true && b === true;
+  return a && b;
 }
 
 function either(a, b) {
-  if (a === true || b === true) {
-    return true;
-  }
-  return false;
+  return a || b;
 }
 
 function none(a, b) {
-  if (a === false && b === false) {
-    return true;
-  }
-  return false;
+  return !a && !b;
 }
 
 function one(a, b) {
-  if (a === true && b === false) {
-    return true;
-  }
-  if (a === false && b === true) {
-    return true;
-  }
-  return false;
+  return a !== b;
 }
 
 function truthiness(a) {
@@ -40,72 +23,40 @@ function truthiness(a) {
 }
 
 function isEqual(a, b) {
-  if (a === b) {
-    return true;
-  }
-  return false;
+  return a === b;
 }
 
 function isGreaterThan(a, b) {
-  if (a > b) {
-    return true;
-  }
-  return false;
+  return a > b;
 }
 
 function isLessThanOrEqualTo(a, b) {
-  if (a <= b) {
-    return true;
-  }
-  return false;
+  return a <= b;
 }
 
 function isOdd(a) {
   const remainder = a % 2;
-  if (remainder === 0) {
-    return false;
-  }
-  return true;
+  return remainder !== 0;
 }
 
 function isEven(a) {
   const remainder = a % 2;
-  if (remainder === 0) {
-    return true;
-  }
-  return false;
+  return remainder === 0;
 }
 
 function isSquare(a) {
-  if (a >= 0 && Number.isInteger(Math.sqrt(a))) {
-    return true;
-  }
-  return false;
+  return a >= 0 && Number.isInteger(Math.sqrt(a));
 }
 
 function startsWith(char, string) {
-  if (string[0] === char) {
-    return true;
-  }
-  return false;
+  return string[0] === char;
 }
 
 function containsVowels(string) {
-  // return /[a-z]*[aeiou][a-z]*/i.test(string);
   return /[aeiou]/i.test(string);
-  // return string.toLowerCase().includes('a', 'e', 'i', 'o', 'u');
 }
 
 function isLowerCase(string) {
-  // if (string.toLowerCase() === string) {
-  //   return true;
-  // } else {
-  //   return false;
-  // }
-  //   let a;
-  //   string.toLowerCase() === string ? (a = true) : (a = false);
-  //   return a;
-  // }
   return string.toLowerCase() === string;
 }
 

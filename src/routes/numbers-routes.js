@@ -1,4 +1,4 @@
-const req = require('express/lib/request');
+// const req = require('express/lib/request');
 
 const router = require('express').Router();
 const { add, multiply, subtract, divide, remainder } = require('../lib/numbers');
@@ -25,7 +25,7 @@ router.post('/multiply', (req, res) => {
   const { a } = req.body;
   const { b } = req.body;
 
-  if (!a || !b) {
+  if (a === undefined || b === undefined) {
     res.status(400).json({ error: 'Parameters "a" and "b" are required.' });
   }
   if (Number.isNaN(parseInt(a, 10) || parseInt(b, 10))) {
