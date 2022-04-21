@@ -1,12 +1,4 @@
 const getNthElement = (index, array) => {
-  // if (index === array.length
-  // return array.at(index);
-
-  // if (index > array.length - 1) {
-  //   index -= array.length;
-  // }
-  // return array[index];
-
   return array[index % array.length];
 };
 
