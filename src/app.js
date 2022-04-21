@@ -5,6 +5,8 @@ const express = require('express');
 const stringsRoute = require('./routes/strings-routes');
 const numbersRoute = require('./routes/numbers-routes');
 const booleansRoute = require('./routes/booleans-routes');
+const arraysRoute = require('./routes/arrays-routes');
+const objectsRoute = require('./routes/objects.routes');
 
 const app = express();
 
@@ -15,5 +17,9 @@ app.use('/strings', stringsRoute);
 app.use('/numbers', numbersRoute);
 
 app.use('/booleans', booleansRoute);
+
+app.use('/booleans', arraysRoute);
+
+app.use('/booleans', objectsRoute);
 
 module.exports = app;
