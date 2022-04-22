@@ -11,7 +11,7 @@ const csvStringToArray = string => {
 };
 
 const addToArray = (element, array) => {
-  array.push(element);
+  return array.push(element);
 };
 
 const addToArray2 = (element, array) => {
@@ -57,7 +57,6 @@ function elementsStartingWithAVowel(strings) {
 }
 
 const removeSpaces = string => {
-  console.log(string.replace(/\s/g, ''));
   return string.replace(/\s/g, '');
 };
 
