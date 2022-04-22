@@ -1,5 +1,3 @@
-// const req = require('express/lib/request');
-
 const router = require('express').Router();
 const { add, multiply, subtract, divide, remainder } = require('../lib/numbers');
 

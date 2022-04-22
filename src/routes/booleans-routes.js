@@ -4,17 +4,18 @@ const { negate, truthiness, isOdd, startsWith } = require('../lib/booleans');
 router.post('/negate', (req, res) => {
   const { value } = req.body;
 
-  return res.status(200).json({ result: negate(value) });
+  res.status(200).json({ result: negate(value) });
 });
 
 router.post('/truthiness', (req, res) => {
   const { value } = req.body;
 
-  return res.status(200).json({ result: truthiness(value) });
+  res.status(200).json({ result: truthiness(value) });
 });
 
 router.get('/is-odd/:a', (req, res) => {
   const a = parseInt(req.params.a, 10);
+
   return Number.isNaN(a)
     ? res.status(400).json({ error: 'Parameter must be a number.' })
     : res.status(200).json({ result: isOdd(a) });
